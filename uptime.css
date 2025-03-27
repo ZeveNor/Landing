@@ -1,0 +1,49 @@
+a{
+  text-decoration: none !important;
+  color: #fff !important;
+  margin: 0;
+}
+.status-squares {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  gap: 3px;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+.bg-green{
+  background-color: #c0b451; 
+}
+.bg-red{
+  background-color: rgb(208, 59, 59);
+}
+
+.status-square {
+  width: 9px;
+  height: 45px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.status-square:hover { 
+  margin-top: 5px;
+  transform: scale(1.2);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .status-square {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .status-square {
+    width: 15px;
+    height: 15px;
+  }
+}
