@@ -4,80 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uptime Chart</title>
+  <title>Swapy Example</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <style>
-    .status-squares {
-      display: flex;
-      flex-wrap: nowrap;
-      width: fit-content;
-      gap: 3px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-    }
-
-    .status-square {
-      width: 10px;
-      height: 35px;
-      border-radius: 5px;
-      flex-shrink: 0;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .status-square:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-    }
-
-    @media (max-width: 768px) {
-      .status-square {
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .status-square {
-        width: 15px;
-        height: 15px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/swapy/dist/swapy.min.css">
+  <script src="https://unpkg.com/swapy/dist/swapy.min.js"></script>
 </head>
 
 <body class="container mt-5">
-  <h2 class="text-center">Server Uptime Chart</h2>
-  <div class="status-timeline mb-3" id="timeline"></div>
+  <div class="container-swap" data-swapy>
+    <div class="outline-block" data-swapy-slot="a">
+      <div class="intro-text" data-swapy-item="a">
+        <div class="d-flex flex-row justify-content-between">
+          <a href="https://github.com/ZeveNor/Shortcut-Utilities">
+            <p>Shortcut-Utilities</p>
+          </a>
+          <a href='https://github.com/ZeveNor/Shortcut-Utilities'><box-icon type='logo' name='github'
+              color='#ffffff'></box-icon></a>
+        </div>
+        <div style="font-size: 14px; " class="d-flex justify-content-between">
+          <p style="margin: 0; margin-bottom: 5px;">Last 50 days</p>
+          <p style="margin: 0;">Now</p>
+        </div>
+        <div class="status-timeline" id="timeline"></div>
+        <div class="d-flex flex-row justify-content-between">
+          <a href="https://zevenor.github.io/Shortcut-Utilities/?Destnation=0909845370">
+            <p style="margin: 0 !important; font-size: 12px;">View website</p>
+          </a>
+          <img height="22"
+            src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNor&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775">
+        </div>
+      </div>
+    </div>
+    <div class="outline-block" data-swapy-slot="b"> 
+      <div class="intro-text" data-swapy-item="b">
+        <div class="d-flex flex-row justify-content-between">
+          <a href="https://github.com/ZeveNor/flappy-bird">
+            <p>flappy-bird with Neural Network </p>
+          </a>
+          <a href='https://github.com/ZeveNor/flappy-bird'><box-icon type='logo' name='github' color='#ffffff'></box-icon></a>
+        </div>
+        <div style="font-size: 14px;" class="d-flex justify-content-between">
+          <p style="margin: 0; margin-bottom: 5px;">Last 50 days</p>
+          <p style="margin: 0;">Now</p>
+        </div>
+        <div class="status-timeline" id="timeline-flappy-bird"></div>
+        <div class="d-flex flex-row justify-content-between">
+          <a href="https://zevenor.github.io/flappy-bird">
+            <p style="margin: 0 !important; font-size: 12px;">View website</p>
+          </a>
+          <img height="22"
+            src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNors&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const timelineElement = document.getElementById("timeline");
-            timelineElement.innerHTML = "";
-            const container = document.createElement("div");
-            container.className = "status-squares d-flex flex-row-reverse";
-            
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            
-            for (let i = 0; i < 60; i++) {
-                const date = new Date(today);
-                date.setDate(date.getDate() - i);
-                const dateString = date.toISOString().split("T")[0];
-                
-                const statusSquare = document.createElement("div");
-                statusSquare.className = "status-square";
-                
-                const isUp = Math.random() > 0.2; 
-                statusSquare.classList.add(isUp ? "bg-success" : "bg-danger");
-                
-                statusSquare.setAttribute("title", `${date.toLocaleDateString()}: ${isUp ? 'Operational' : 'Down'}`);
-                
-                container.appendChild(statusSquare);
-            }
-            
-            timelineElement.appendChild(container);
-        });
+    const container = document.querySelector('.container-swap[data-swapy]');
+    if (container) {
+      const swapy = Swapy.createSwapy(container);
+    } else {
+      console.error('Swapy container not found or missing data-swapy attribute.');
+    }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
