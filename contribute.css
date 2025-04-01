@@ -1,0 +1,68 @@
+.contri-block{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.days-space{
+  justify-content: space-around;
+  margin: 10px 0; 
+  height: 100%;
+}
+.days-text{
+  font-size: 7px;  
+  margin:  0 0; 
+  margin-right: 7px; 
+}
+.name-days{
+  display: grid;
+  margin: 5px;
+  width: fit-content;
+  height: fit-content; 
+  border-radius: 4px;
+  grid-template-rows: 1, 1fr; 
+  grid-template-columns: repeat(6, 0fr);     
+  box-shadow: 0 15px 35px 0 rgba(42, 51, 83, 0.12),
+    0 5px 15px rgba(0, 0, 0, 0.06);
+}
+.days {
+  display: grid;
+  grid-gap: 4px;  
+  margin: 10px 0 0 0;
+  width: 100%;
+  height: fit-content; 
+  border-radius: 4px;
+  grid-template-rows: repeat(7, 1fr); 
+  grid-template-columns: repeat(53, 1fr);    
+  box-shadow: 0 15px 35px 0 rgba(42, 51, 83, 0.12),
+    0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.day {
+  width: 7px;
+  height: 7px;     
+}
+
+.inactive {
+  background-color: #918f8f6e;
+}
+.active-1 {
+  background-color: #196c2e;
+}
+.active-2 {
+  background-color: #2ea043;
+}
+.active-3 {
+  background-color: #56d364;
+}
+
+.none {
+  background-color: transparent;
+}
+
+.very-active {
+  background-color: #ff4b4b;
+}
