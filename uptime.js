@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   today.setHours(0, 0, 0, 0);
 
   for (let i = 0; i < 50; i++) {
-    const date = new Date(today);
+    const date = new Date(today); 
     date.setDate(date.getDate() - i);
     const dateString = date.toISOString().split("T")[0];
 
