@@ -34,16 +34,28 @@ a{
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 460px) {
   .status-square {
-    width: 20px;
-    height: 20px;
+    width: 3px;
+    height: 30px;
+  }
+}
+@media (max-width: 1399px) {
+  .intro-text{
+    width: 100%; 
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 760px) {
   .status-square {
-    width: 15px;
-    height: 15px;
+    width: 8px;
+    height: 30px;
+  } 
+  .status-timeline{
+    overflow-x: scroll;  
+  }
+  .intro-text{
+    width: 75vw;
   }
 }
+
