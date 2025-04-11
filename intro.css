@@ -62,9 +62,6 @@
 }
 
 @media (max-width: 1399px) {
-  .outline-block-hello{
-    
-  }
   .outline-block{
     width: fit-content;
   }

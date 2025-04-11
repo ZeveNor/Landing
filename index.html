@@ -8,7 +8,10 @@
   <link rel='stylesheet' href='./uptime.css'/>
   <link rel='stylesheet' href='./intro.css'/>
   <link rel='stylesheet' href='./mac.css'/>
+  <link rel='stylesheet' href='./gallery.css'/> 
+  <link rel='stylesheet' href='./blob.css'/>
   <link rel='stylesheet' href='./contribute.css'/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -89,9 +92,9 @@
       
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="border-bottom mx-4 "></div>
-        <ul class="navbar-nav ms-auto px-4">
+        <ul class="navbar-nav ms-auto px-4"> 
           <li class="nav-item"><a href="#first-content" class="nav-link text-white fw-medium">Introduce</a></li>
-          <li class="nav-item"><a href="" class="nav-link text-white fw-medium">Showcase</a></li>
+          <li class="nav-item"><a href="#start" class="nav-link text-white fw-medium">Showcase</a></li>
           <li class="nav-item"><a href="#avp" class="nav-link text-white fw-medium">Status</a></li> 
           <li class="nav-item"><a href="#" class="nav-link fw-medium disabled" style="color: rgba(255, 255, 255, 0.591) !important;" aria-disabled="true">Shop <span style="font-size: 12px !important;">( กำลังพัฒนา )</span></a></li>
           <li class="nav-item">
@@ -143,9 +146,15 @@
         <div class="mx-0 mx-sm-0 "> 
           <p>  
             <span class="hello">Good Morning!</span> <span class="after-hello">My name is <span class="zev">ZEV . .</span></span><br/>
-            <div class="outline-block-hello mb-5 ">   
+            <!-- <div class="blob-container mb-5 mt-5 d-flex flex-row">
+              <div class='box'></div>
+              <div class="" style=" height: 350px; display: flex; align-items: end;">
+                <div class="little-box"></div>
+              </div>
+            </div> -->
+            <div class="outline-block-hello mb-5 ">    
               <div class="intro-text">
-                I think I'm nearly close to becoming a Junior developer . . .<br/>
+                I think I'm nearly close to be a Junior developer . . .<br/>
                 . . . Working as a developer </span><span class="num-5">for 5 years.</span>
                 <span class="blink">|</span>
                 <span class="dream"> 
@@ -215,8 +224,8 @@
                     <a href="https://zevenor.github.io/Shortcut-Utilities/?Destnation=0909845370">
                       <p style="margin: 0 !important; font-size: 12px;">View website</p>
                     </a>
-                    <!-- <img height="22"
-                      src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNor&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775"> -->
+                    <img height="22"
+                      src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNor&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775">
                   </div>
                 </div>
               </div>
@@ -240,8 +249,8 @@
                     <a href="https://zevenor.github.io/flappy-bird">
                       <p style="margin: 0 !important; font-size: 12px;">View website</p>
                     </a>
-                    <!-- <img height="22"
-                      src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNors&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775"> -->
+                    <img height="22"
+                      src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNors&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775">
                   </div>
                 </div> 
               </div>
@@ -412,35 +421,330 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div> 
   </section>
-  <section>
-    <!-- <div class="mac-window">
-      <div class="mac-header">
-        <div class="buttons">
-          <div class="button red"></div>
-          <div class="button yellow"></div>
-          <div class="button green"></div>
-        </div>
+  <section id="gallery" class="pt-5" style="background:url('./bgwork.png'); 
+  background-color: #18181b; background-repeat: no-repeat;"> 
+    <div id="start" class="text-group-container">
+      <div>
+        <ul class="text-group"> 
+          <li class="text-container neon-container">
+            <h1 class="neon-text">PROJECT</h1>
+            <h2 style=" color: transparent; -webkit-text-stroke: 0.3px #ffffff; ">WEB DEVELOPMENT</h2>
+            <h4>MADE BY ME</h4> 
+          </li>
+          <li class="text-container neon-container">
+            <h1 class="neon-text">WORK</h1>
+            <h2 style=" color: transparent; -webkit-text-stroke: 0.3px #ffffff; ">BACKEND DEVELOPMENT</h2>
+          </li>
+        </ul>
       </div>
-      <div class="code-content">
-    
-      </div>
-    </div> -->
+    </div>
   </section>
+  <script type="module">
+    import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.6.0/+esm"
+
+    const item = document.querySelectorAll(".text-container")
+
+    scroll(
+      animate(".text-group", {
+        transform: ["none", `translateX(-${item.length - 1}00vw)`],
+      }), 
+      { target: document.querySelector(".text-group-container") }
+    )
+    scroll(animate(".progresss", { scaleX: [0, 1] }), {
+      target: document.querySelector(".text-group-container"),
+
+    })
+  </script>
+
+  <section id="gallery">
+    <div class="img-group-container">
+      <div>
+        <ul class="img-group">
+          <li class="img-container g-box1">
+            <h1 class="head text-gradient">FLAPPY BIRD</h1>
+            <h4 class="sub-head">USING NEURAL NETWORK</h4>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="g-box">
+                <div class="g-details">
+                  <div style="box-shadow: 0 15px 35px 0 rgba(78, 235, 43, 0.586);">
+                    <h4>FLAPPY BIRD</h4>
+                    <hr />
+                    <p>This project use machine learning to learn how to get higher and higher score.
+                      I use genetic algorithm. It's supervised learning and have mutation to make
+                      next generation smarter and smarter.
+                    </p> 
+                    <p>Using JavaScript as the base and HTML and CSS for visualization.</p>
+                    <hr />
+                    <p>Ref Book: Evolutionary Algorithms and Neural Networks, Seyedali Mirjalili</p>
+                    <hr />
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                      <div class="d-flex flex-row gap-1 justify-content-center align-items-center">
+                        <i class="bi bi-filetype-js" style="font-size: 1.48rem; color: rgb(121, 237, 100);"></i>
+                        <i class="bi bi-filetype-html" style="font-size: 1.54rem; color: rgb(247, 118, 118);"></i>
+                        <i class="bi bi-filetype-css" style="font-size: 1.5rem; color: rgb(220, 218, 218);"></i>
+                      </div>
+                      <div class="d-flex flex-row gap-3">
+                        <a href='https://github.com/ZeveNor/flappy-bird' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-github"></i>
+                            Github
+                          </button>
+                        </a>
+                        <a href='https://zevenor.github.io/flappy-bird/' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-link-45deg"></i>
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="g-details d-flex justify-content-center align-items-center">
+                  <div style="border-radius: 20px; padding: 0; overflow: hidden; box-shadow: none;">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/6ZmfrgC-uo8"
+                      title="Flappy Bird High score record" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="img-container g-box1"> 
+            <h1 class="head text-gradient">E-COMMERCE</h1>
+            <h4 class="sub-head">USING NEXT.JS | MONGODB & POSTGRESQL</h4>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="g-box">
+                <div class="g-details">
+                  <div style="box-shadow: 0 15px 35px 0 rgba(209, 13, 13, 0.586);">
+                    <h4>E-COMMERCE SHOP</h4> 
+                    <hr />
+                    <p>This project is a e-commerce website that allows users to browse and purchase products online.
+                      I plan to sell products such as Account game id, Game item and other digital products.
+                    </p>
+                    <p>Frontend : Using Next.js and Tailwinds as the base and Shadcn as UI library <br/> 
+                      Backend : Using express, mongoose and postgresql <br/>
+                      Deploy : Google firebase for webapp, AWS for backend and database
+                    </p> 
+                    <hr />
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                      <div class="d-flex flex-row gap-1 justify-content-center align-items-center">
+                        <i class="bi bi-triangle-fill" style="font-size: 1.8rem; color: rgb(255, 255, 255);"></i>
+                        <box-icon name='react' type='logo' color='#faf7f7' size="md"></box-icon>
+                        <box-icon name='tailwind-css' type='logo' color='#faf7f7'  size="md"></box-icon> 
+                      </div>
+                      <div class="d-flex flex-row gap-3">
+                        <a href='https://github.com/ZeveNor/shop' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-github"></i>
+                            Github Frontend
+                          </button>
+                        </a>
+                        <a href='https://github.com/ZeveNor/shop-core' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-github"></i>
+                            Github Backend 
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="g-details d-flex justify-content-center align-items-center">
+                  <div style="border-radius: 20px; padding: 0; overflow: hidden; box-shadow: none;">
+                    <img class="img-shop" src='./src/work/shop.png' alt=''/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="img-container g-box1" style="background: url('./src/work/shortcutlogo.png')  no-repeat center 30vh;">
+            <h1 class="head text-gradient">QUICK PROMPTPAY QR</h1>
+            <h4 class="sub-head">USING SHORTCUT IN IOS </h4>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="g-box">
+                <div class="g-details">
+                  <div style="box-shadow: 0 15px 35px 0 rgba(142, 43, 235, 0.586);">
+                    <h4>QUICK PROMPTPAY QR</h4>
+                    <hr />
+                    <p>This project uses the Shortcuts app on iOS to help users easily interact with the web app. I converted the backend to
+                    make it compatible for deployment on GitHub Pages, allowing free and permanent use.
+                    </p> 
+                    <p>Frontend : Using JavaScript HTML and CSS for Web app. <br/>
+                      Backend : Using express as base<br/>
+                      Example : https://zevenor.github.io/StaticWebQrcodePayTH/?id=0123456789!50   
+                    </p>
+                    <hr />
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                      <div class="d-flex flex-row gap-1 justify-content-center align-items-center">
+                        <i class="bi bi-filetype-js" style="font-size: 1.48rem; color: rgb(121, 237, 100);"></i>
+                        <i class="bi bi-filetype-html" style="font-size: 1.54rem; color: rgb(247, 118, 118);"></i>
+                        <i class="bi bi-filetype-css" style="font-size: 1.5rem; color: rgb(220, 218, 218);"></i>
+                      </div>
+                      <div class="d-flex flex-row gap-3">
+                        <a href='https://github.com/ZeveNor/Shortcut-Utilities' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-github"></i>
+                            Github Frontend
+                          </button>
+                        </a>
+                        <a href='https://github.com/ZeveNor/StaticWebQrcodePayTH' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-github"></i>
+                            Github Backend
+                          </button>
+                        </a>
+                        <a href='https://www.icloud.com/shortcuts/878d86d65de445b49c65242677b55b1d' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-apple"></i>
+                            Try it
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="g-details d-flex justify-content-center align-items-center">
+                  <div class="d-flex gap-4 flex-row" style="box-shadow: none; background-color: transparent;" >
+                    <iframe width="250" height="400" src="https://www.youtube.com/embed/lnCDIHNKV3U" title="Shortcut-Utilities"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe> 
+                    <img class="img-shortcut" src='./src/work/shortcut.png' alt=''/> 
+                </div>
+              </div>
+            </div>
+          </li> 
+          <li class="img-container g-box1">
+            <h1 class="head text-gradient">PREDICT STOCK DEMAND</h1>
+            <h4 class="sub-head">USING DEEP LEARNING 'LSTM'</h4>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="g-box">
+                <div class="g-details">
+                  <div style="box-shadow: 0 15px 35px 0 rgba(235, 43, 145, 0.586);">
+                    <h4>PREDICT STOCK DEMAND</h4>
+                    <hr />
+                    <p>This project use machine learning called LSTM to train datasets and predict the next sale.
+                      it help pharmacy to stock the drugs more accurate. using rainfall, temperature and other factors
+                      for a features. Development using anaconda and jupyter notebook.
+                    </p> 
+                    <p>Frontend : Using JavaScript, HTML and Bootstrap for Web app. <br />
+                      Backend : Using Flask Python and Postgresql <br />
+                      Deploy : Google firebase for webapp, Digitalocean for backend and database
+                    </p>
+                    <hr />
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                      <div class="d-flex flex-row gap-1 justify-content-center align-items-center">
+                        <i class="bi bi-filetype-py" style="font-size: 1.48rem; color: rgb(100, 159, 247);"></i>
+                        <i class="bi bi-filetype-js" style="font-size: 1.48rem; color: rgb(121, 237, 100);"></i>
+                        <i class="bi bi-filetype-html" style="font-size: 1.54rem; color: rgb(247, 118, 118);"></i>
+                        <i class="bi bi-filetype-css" style="font-size: 1.5rem; color: rgb(220, 218, 218);"></i>
+                      </div>
+                      <div class="d-flex flex-row gap-3">
+                        <a href='https://github.com/ZeveNor/Phamacy-Predict' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-github"></i>
+                            Github Frontend
+                          </button>
+                        </a>
+                        <a href='https://github.com/ZeveNor/Phamacy-Predict-Core' target="_blank">
+                          <button type="button" class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            <i class="bi bi-github"></i>
+                            Github Backend
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="g-details d-flex justify-content-center align-items-center">
+                  <div style="border-radius: 20px; padding: 0; overflow: hidden; box-shadow: none;">
+                    <img class="img-shop" src='./src/work/predict.png' alt='' />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="img-container g-box1">
+            <h1 class="head text-gradient">DISCORD BOT</h1>
+            <h4 class="sub-head">USING NODEJS & MONGODB</h4>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="g-box">
+                <div class="g-details">
+                  <div style="box-shadow: 0 15px 35px 0 rgba(20, 226, 233, 0.586);">
+                    <h4>DISCORD BOT</h4>
+                    <hr />
+                    <p>This project use nodejs to develop bot to use in discord.
+                      I developed many features such as Room management, Streaming music,
+                      File management, Work management, TodoList and much more.
+                    </p>
+                    <p>Using Nodejs as base and MongoDB as database <br/>
+                      Platform : Discord 
+                    </p>
+                    <hr />
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                      <div class="d-flex flex-row gap-1 justify-content-center align-items-center">
+                        <box-icon name='nodejs' type='logo' color='#faf7f7' size="md"></box-icon> 
+                        <box-icon name='mongodb' type='logo' color='#faf7f7' size="md"></box-icon> 
+                      </div>
+                      <div class="d-flex flex-row gap-3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="g-details d-flex justify-content-center align-items-center">
+                  <div style="border-radius: 20px; padding: 0; overflow: hidden; box-shadow: none;">
+                    <img class="img-shop" src='./src/work/botdiscord.png' alt='' /> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div> 
+    </div>
+    <div class="progresss-bar" role="progressbar"></div> 
+    <div class="d-flex justify-content-center align-items-center flex-column" style="height: 100vh; background-color: #18181b;">
+      <h1 class="neon-text mb-5">And much more</h1>  
+      <h2 style="color: rgba(255, 255, 255, 0.806);">To hire me, please contact me via email.</h2>  
+      <h3 style="color: rgba(255, 255, 255, 0.806);">reset.fluent@gmail.com</h3>  
+    </div>
+  </section>
+  <script type="module">
+    import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.6.0/+esm"
+
+    const items = document.querySelectorAll(".img-container")
+    const progressBar = document.querySelector(".progresss-bar") 
+
+    scroll(
+      animate(".img-group", {
+        transform: ["none", `translateX(-${items.length - 1}00vw)`],
+      }),
+      { target: document.querySelector(".img-group-container") }
+    )
+
+    scroll(animate(".progresss-bar", { scaleX: [0, 1, 1 ,0] }), {
+      target: document.querySelector(".img-group-container"),
+    })
+
+  </script>
+  
   <script src="./uptime.js"></script>
   <script src="./qrcode.js"></script>
   <script>
-    VANTA.GLOBE({  
-      el: ".bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      scale: 1.00,  
-      scaleMobile: 1.00,
-      backgroundColor: 0x20202
-    }) 
+     VANTA.GLOBE({  
+       el: ".bg",
+       mouseControls: true,
+       touchControls: true,
+       gyroControls: false,
+       scale: 1.00,  
+       scaleMobile: 1.00,
+       backgroundColor: 0x20202
+     }) 
 
     const container = document.querySelector('.container-swap');
       if (container) {
