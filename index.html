@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -63,6 +64,27 @@
       justify-content: center;
       align-items: center;
       z-index: 9999; 
+    }
+ 
+    .modal-body {
+      height: 100%;
+    }
+
+    .containers {
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+      height: 100%;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+ 
+    .swiper-pagination-bullet{
+      background-color: #ffffff !important;
     }
   </style>
 </head> 
@@ -140,7 +162,8 @@
   </div> 
 
   <section id="first-content">
-    <div style="background-color: rgb(13, 6, 20); background-image: url('./src/work/bgimgsection.png'); background-repeat: repeat-x;" class="d-flex justify-content-center align-items-center">
+    <!-- <div style="background-color: rgb(13, 6, 20); background-image: url('./src/work/bgimgsection.png'); background-repeat: repeat-x;" class="d-flex justify-content-center align-items-center"> -->
+    <div style="background-color: rgb(13, 6, 20); background-image: url('https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2Fbgimgsection.png?alt=media'); background-repeat: repeat-x;" class="d-flex justify-content-center align-items-center">
       <div class="my-5 text-white d-flex flex-xxl-row flex-column" style="width: 80vw;"> 
         <div class="mx-0 mx-sm-0 "> 
           <p>  
@@ -249,7 +272,7 @@
                       <p style="margin: 0 !important; font-size: 12px;">View website</p>
                     </a>
                     <img height="22"
-                      src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNors&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775">
+                      src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FZeveNorss&amp;label=VISITOR%20TOTAL&amp;labelColor=%23000000&amp;countColor=%23dce775">
                   </div>
                 </div> 
               </div>
@@ -423,8 +446,10 @@
       </div> 
     </div> 
   </section>
-  <section id="gallery" class="pt-5" style="background:url('./src/work/bgwork.png'); 
-  background-color: #18181b; background-repeat: no-repeat;"> 
+  <!-- <section id="gallery" class="pt-5" style="background:url('./src/work/bgwork.png'); 
+  background-color: #18181b; background-repeat: no-repeat;">  -->
+  <section id="gallery" class="pt-5" style="background:url('https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2Fbgwork.png?alt=media'); 
+    background-color: #18181b; background-repeat: no-repeat;">
     <div id="start" class="text-group-container">
       <div>
         <ul class="text-group"> 
@@ -554,13 +579,15 @@
                 </div>
                 <div class="g-details d-flex justify-content-center align-items-center">
                   <div style="border-radius: 20px; padding: 0; overflow: hidden; box-shadow: none;">
-                    <img class="img-shop" src='./src/work/shop.png' alt=''/>
+                    <!-- <img class="img-shop" src='./src/work/shop.png' alt=''/> -->
+                    <img class="img-shop" src='https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2Fshop.png?alt=media' alt='' />
                   </div>
                 </div>
               </div>
             </div>
           </li>
           <li class="img-container g-box1" style="background: url('./src/work/shortcutlogo.png')  no-repeat center 30vh;">
+          <!-- <li class="img-container g-box1" style="background: url('https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2Fshortcutlogo.png?alt=media')  no-repeat center 30vh;"> -->
             <h1 class="head text-gradient">QUICK PROMPTPAY QR</h1>
             <h4 class="sub-head">USING SHORTCUT IN IOS </h4>
             <div class="d-flex justify-content-center align-items-center">
@@ -611,9 +638,10 @@
                     <iframe width="250" height="400" src="https://www.youtube.com/embed/lnCDIHNKV3U" title="Shortcut-Utilities"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> 
                     </iframe> 
-                    <img class="img-shortcut" src='./src/work/shortcut.png' alt=''/> 
+                    <img class="img-shortcut" src='https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2Fshortcut.png?alt=media' alt=''/> 
+                    <!-- <img class="img-shortcut" src='./src/work/shortcut.png' alt='' /> -->
                 </div>
               </div>
             </div>
@@ -662,12 +690,14 @@
                 </div>
                 <div class="g-details d-flex justify-content-center align-items-center">
                   <div style="border-radius: 20px; padding: 0; overflow: hidden; box-shadow: none;">
-                    <img class="img-shop" src='./src/work/predictdetail.png' alt='' />
+                    <!-- <img class="img-shop" src='./src/work/predictdetail.png' alt='' /> -->
+                    <img class="img-shop" src='https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2Fpredictdetail.png?alt=media' alt='' />
                   </div>
                 </div>
               </div>
             </div>
           </li>
+          
           <li class="img-container g-box1">
             <h1 class="head text-gradient">DISCORD BOT</h1>
             <h4 class="sub-head">USING NODEJS & MONGODB</h4>
@@ -691,13 +721,17 @@
                         <box-icon name='mongodb' type='logo' color='#faf7f7' size="md"></box-icon> 
                       </div>
                       <div class="d-flex flex-row gap-3">
+                        <button type="button" disabled class="btn btn-outline-light d-flex align-items-center gap-2 ">
+                            Click image to see more
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="g-details d-flex justify-content-center align-items-center">
                   <div style="border-radius: 20px; padding: 0; overflow: hidden; box-shadow: none;">
-                    <img class="img-shop" src='./src/work/disimg.png' alt='' /> 
+                    <!-- <img class="img-shop" data-bs-toggle="modal" data-bs-target="#exampleModal" src='./src/work/disimg.png' alt='' />  -->
+                    <img class="img-shop" src='https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2Fdisimg.png?alt=media' alt='' />
                   </div>
                 </div>
               </div>
@@ -712,7 +746,65 @@
       <h2 style="color: rgba(255, 255, 255, 0.806);">To hire me, please contact me via email.</h2>  
       <h3 style="color: rgba(255, 255, 255, 0.806);">zeven@flune.xyz</h3>  
     </div>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered" > 
+        <div class="modal-content" style="background-color: #18181b !important;">
+          <div class="modal-header d-flex justify-content-center text-white  pt-3" style="border: transparent;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"> 
+              < Use scroll mouse or swipe > 
+            </h1>
+          </div>
+          <script type="module">
+            import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+            const swiper = new Swiper('.containers', {
+              mousewheel: true,
+              loop: true,
+              centeredSlides: true, 
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+          </script> 
+          <div class="modal-body d-flex justify-content-center align-items-center" style="overflow-x: hidden;">
+            <div class="containers container">
+              <ul class="swiper-wrapper">
+                <!-- <li class="swiper-slide"> 
+                  <img src="./src/discord/2.png" /> 
+                </li>
+                <li class="swiper-slide">
+                  <img src="./src/discord/3.png" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="./src/discord/4.png" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="./src/discord/5.png" />
+                </li> -->
+                <li class="swiper-slide">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2F2.png?alt=media" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2F3.png?alt=media" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2F4.png?alt=media" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/storage-image-779ac.appspot.com/o/Landing%2F5.png?alt=media" />
+                </li>
+              </ul>
+    
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+  
   <script type="module"> 
     import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.6.0/+esm"
 
@@ -742,7 +834,7 @@
        gyroControls: false,
        scale: 1.00,  
        scaleMobile: 1.00,
-       backgroundColor: 0x20202
+       backgroundColor: 0x20202 
      }) 
 
     const container = document.querySelector('.container-swap');
