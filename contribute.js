@@ -1,7 +1,7 @@
 function formatDate(date) {
   const options = { month: 'short', day: 'numeric' };
   return date.toLocaleDateString('en-US', options); 
-}
+} 
 
 $(document).ready(function () {
   $('#contribution-grid').empty();
