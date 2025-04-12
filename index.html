@@ -261,7 +261,11 @@
                 function getScrape(yearInput) {
                   let year = yearInput ? yearInput : 2025
 
-                  fetch(`http://52.65.174.177:3000/contributions?username=ZeveNor&year=${year}`)
+                  fetch(`https://515e-52-65-174-177.ngrok-free.app/contributions?username=ZeveNor&year=${year}`, {
+                    headers: {
+                      'ngrok-skip-browser-warning': 'true'
+                    }
+                  })
                     .then(response => response.json())
                     .then(res => {
                       const contributionGrid = document.getElementById('contribution-grid');
@@ -430,9 +434,6 @@
                           count++;
                         }
                         arranged = sun.concat(mon, tue, wed, thu, fri, sat);
-                        console.log(sun);
-
-
                         return arranged;
                       };
 
